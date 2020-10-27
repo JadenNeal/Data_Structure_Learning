@@ -8,9 +8,10 @@
 /*
 * 索引没有语意，该如何做呢？
 * */
+package Array;
 public class Main {
     public static void main(String[] args) {
-        Array<Integer> arr = new Array<>();
+        Array<Integer> arr = new Array<Integer>();
         for(int i = 0; i < 10; i ++)
             arr.addLast(i);
         System.out.println(arr);
