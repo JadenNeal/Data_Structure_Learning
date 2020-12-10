@@ -71,6 +71,14 @@ public class Array<E> {
         return data[index];
     }
 
+    public E getLast(){
+        return get(size - 1);
+    }
+
+    public E getFirst(){
+        return get(0);
+    }
+
     // 修改index位置的元素为e
     public void set(int index, E e){
         if(index < 0 || index >= size)
@@ -143,6 +151,13 @@ public class Array<E> {
     }
 
     private void resize(int newCapacity){
+        /*
+        考虑一个问题，当数组容量为n时，添加元素，数组会扩容
+        此时删除元素，按照原来的逻辑，应直接缩容，但是resize()的复杂度是O(n)
+        所以这样做并不划算。
+        较好的处理方式应该是采取一种较为 *lazy* 的方式
+        添加元素就扩容，这个正常不变，但是等到数组元素只有容量的1/4时，再缩容就好很多了。
+         */
         E[] newData =(E[]) new Object[newCapacity];
         for(int i = 0; i < size; i++)
             newData[i] = data[i];
