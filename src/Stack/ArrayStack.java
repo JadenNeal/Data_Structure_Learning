@@ -45,4 +45,19 @@ public class ArrayStack<E> implements Stack<E> {
     public E peek() {
         return array.getLast();
     }
+
+    @Override
+    // 重写方法以打印
+    public String toString(){
+        StringBuilder res = new StringBuilder();
+        res.append("Stack: ");
+        res.append('[');
+        for(int i = 0; i < array.getSize(); i ++){
+            res.append(array.get(i));
+            if(i != array.getSize() -1)
+                res.append(", ");
+        }
+        res.append("] top");
+        return res.toString();
+    }
 }
