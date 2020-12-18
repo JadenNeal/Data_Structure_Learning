@@ -120,8 +120,8 @@ public class Array<E> {
     }
 
     // 删除数组中第一个元素
-    public void removeFirst(){
-        remove(0);
+    public E removeFirst(){
+        return remove(0);
     }
 
     // 删除数组最后一个元素
