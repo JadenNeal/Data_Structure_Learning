@@ -14,5 +14,8 @@ public class Main {
         System.out.println(linkedList);
         linkedList.add(2, 2080);
         System.out.println(linkedList);
+
+        linkedList.remove(2);
+        System.out.println(linkedList);
     }
 }
