@@ -126,7 +126,7 @@ public class LinkedList<E> {
     public E remove(int index){
         if(index < 0 || index >= size)
             throw new IllegalArgumentException("Remove failed. Index is illegal.");
-
+        
         Node prev = dummyHead;
         for(int i = 0; i < index; i ++)
             prev = prev.next;
