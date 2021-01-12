@@ -1,5 +1,4 @@
 package Stack;
-
 import Array.Array;
 
 /**
