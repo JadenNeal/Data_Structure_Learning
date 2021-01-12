@@ -42,6 +42,7 @@ public class ArrayStack<E> implements Stack<E> {
 
     @Override
     public E peek() {
+        // 获取栈顶元素
         return array.getLast();
     }
 
