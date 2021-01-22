@@ -79,7 +79,6 @@ public class BST<E extends Comparable<E>> {
     // 中 左 右
     public void preOrder(){
         preOrder(root);
-
     }
 
     private void preOrder(Node node){
